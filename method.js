@@ -13,13 +13,16 @@ const t = {
     take: function (id) {
         console.log('student name :', this.name, id);
     },
-    tret: function (expense) {
-        this.money = this.money - expense;
-        return this.money;
+    tret: function (expense, b) {
+        const p = this.money - expense - b;
+        return p;
     }
 
 
 }
 t.take(18);
-const tret = t.tret(2000)
-console.log(tret)
+const remaning1 = t.tret(2000, 100)
+const remaning2 = t.tret(2000, 100)
+const remaning3 = t.tret(2000)
+
+console.log(remaning1);
